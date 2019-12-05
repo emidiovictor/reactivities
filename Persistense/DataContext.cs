@@ -1,6 +1,7 @@
+using Domain;
 using Microsoft.EntityFrameworkCore;
 
-namespace Persistense.DataContext
+namespace Persistense
 {
     public class DataContext : DbContext
     {
@@ -8,6 +9,7 @@ namespace Persistense.DataContext
         {
 
         }
+        public DbSet<Activity> Activity { get; set; }
 
     }
 }
