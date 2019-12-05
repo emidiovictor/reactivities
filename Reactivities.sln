@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{2932AC05-F193-4912-A610-B5CB1EEB2534}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "Persistence\Persistence.csproj", "{86BB36DA-47C0-4E73-8ACC-8E9D0D60467A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistesce", "Persistense\Persistense.csproj", "{86BB36DA-47C0-4E73-8ACC-8E9D0D60467A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "Api\API.csproj", "{09E6E8CF-5DCD-4E61-AD45-9572E401DEF5}"
 EndProject
