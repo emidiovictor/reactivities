@@ -10,10 +10,17 @@ const App = () => {
   const [selectedActivity, setSelectedActivity] = useState<IActivity | null>(
     null
   );
+  const [editMode, setEditMode] = useState(false);
 
   const handleSelectedActivity = (id: string) => {
     setSelectedActivity(activities.filter(x => x.id === id)[0]);
   };
+
+  const handleOpenCreateForm = () => {
+    setSelectedActivity(null);
+    setEditMode(true);
+  };
+
   useEffect(() => {
     axios
       .get<IActivity[]>("http://localhost:5000/api/activities")
@@ -24,12 +31,14 @@ const App = () => {
 
   return (
     <>
-      <NavBar />
+      <NavBar openCreateForm={handleOpenCreateForm} />
       <Container style={{ marginTop: "7em" }}>
         <ActivityDashBoard
           activities={activities}
           selectActivity={handleSelectedActivity}
           selectedActivity={selectedActivity!}
+          editMode={editMode}
+          setEditMode={setEditMode}
         />
       </Container>
     </>
