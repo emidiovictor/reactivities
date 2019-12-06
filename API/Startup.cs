@@ -27,7 +27,7 @@ namespace API {
           policy.AllowAnyHeader ().AllowAnyMethod ().WithOrigins ("http://localhost:3000");
         });
       });
-      services.AddMediatR (typeof(List.Handler).Assembly);
+      services.AddMediatR (typeof (List.Handler).Assembly);
 
       services.AddControllers ();
       services.AddDbContext<DataContext> (opt => opt.UseSqlite (Configuration.GetConnectionString ("DefaultConnection")));

@@ -26,12 +26,12 @@ namespace Application.Activities {
 
             public async Task<Unit> Handle (Command request, CancellationToken cancellationToken) {
 
+                var activity = await _context.Activity.FindAsync (request.Id);
 
-                var activity = await _context.Activity.FindAsync(request.Id);
-                
-                if(activity== null){
-                    throw new Exception("Activity not found");
+                if (activity == null) {
+                    throw new Exception ("Activity not found");
                 }
+
                 activity.Title = request.Title ?? activity.Title;
                 activity.Description = request.Description ?? activity.Description;
                 activity.Category = request.Category ?? activity.Category;
